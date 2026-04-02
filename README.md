@@ -106,6 +106,20 @@ SFとファンタジーの融合。
 テクノロジーは神秘的に、私に関わるものは中世ファンタジーで。
 
 CSS、JavaScriptを使い体験を損ねないようにしながらもBlueProtocolのようなアニメーションや演出をマシマシにする。
+### フォントの候補
+- [Noto Sans Japanese](https://fonts.google.com/noto/specimen/Noto+Sans+JP)（本文で使えそう）
+- [Shippori Mincho](https://fonts.google.com/specimen/Shippori+Mincho)（ちょっと尖りすぎ演出用？）
+- [Sawarabi Mincho](https://fonts.google.com/specimen/Sawarabi+Mincho)（ちょっと尖りすぎ演出用？）
+- [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono)（システムチックなやつ）
+- [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono)（システムチックなやつ）
+- Impact（デフォであるらしい）
+- [Klee One](https://fonts.google.com/specimen/Klee+One)（手書き身がある、本文で使えそう）
+- [Zen Kurenaido](https://fonts.google.com/specimen/Zen+Kurenaido)（手書き身がある、本文で使えそう）
+- [しょかきさらり](https://forest.watch.impress.co.jp/library/software/shokaki_gyo/)（日本語版筆記体）
+- [英椎楷書](https://goodfreefonts.com/4887/)（ちょっと達筆な筆っぽいやつ）
+- [Pinyon Script](https://fonts.google.com/specimen/Pinyon+Script?preview.script=Latn)（上手な筆記体）
+- [IM Fell English](https://fonts.google.com/specimen/IM+Fell+English?preview.script=Latn)（タイプライターっぽくて好き）
+- [Homemade Apple](https://fonts.google.com/specimen/Homemade+Apple?preview.script=Latn)（手書きみのある筆記体）
 ## 対応させたいもの
 [] レスポンシブデザイン
 
