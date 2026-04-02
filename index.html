@@ -5,13 +5,14 @@
         <title>sorai's portfolio</title>
         <meta name="description" content="ぽーとふぉりお">
         <meta name="viewport" content="width=device-whidth, intial-scale=1"
-        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <!-- <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"> -->
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
             <!-- spanはとくに意味がないときに使うらしいけどなんか曖昧
              →正しいspanの使いどころとは？ -->
+            <!-- そもそもこれいる？ -->
             <span>
                 sorai
             </span>
@@ -27,7 +28,7 @@
                         <a>Article</a>
                     </li>
                     <li>
-                        Stack
+                        <a>Stack</a>
                     </li>
                     <li>
                         <a>Profile</a>
@@ -39,39 +40,240 @@
             </nav>
         </header>
         <main>
+            <!-- 市場で例えるなら売り物を置く机がsectionでそこで売られている本がarticleらしい。 -->
             <section>
                 <h1>
                     sorai
                 </h1>
-            <p>
-                空彩來<br>
-                Web/Game Engineer?
-            </p>
+                <article>
+                <p>
+                    空彩來<br>
+                    Web/Game Engineer?
+                </p>
+                </article>
             </section>
             <section>
                 <h2>
                     Topics
                 </h2>
+                <!-- h2を巻き込まない形でgridを使うため -->
+                <div>
+                    <article>
+                        <h3>
+                            Portfolio
+                        </h3>
+                        <p>
+                            軽い説明
+                        </p>
+                        <p>使用技術</p>
+                    </article>
+                    <article>
+                        <h3>
+                            記事
+                        </h3>
+                        <p>
+                            軽い説明
+                        </p>
+                    </article>
+                </div>
             </section>
             <section>
                 <h2>
                     Works
                 </h2>
+                <!-- h2を巻き込まない形でgridを使うため -->
+                <div>
+                    <article>
+                        <h3>
+                            Portfolio
+                        </h3>
+                        <p>
+                            軽い説明
+                        </p>
+                        <p>使用技術</p>
+                    </article>
+                    <article>
+                        <h3>
+                            課題研究のやーつ
+                        </h3>
+                        <p>
+                            軽い説明
+                        </p>
+                        <p>使用技術</p>
+                    </article>
+                </div>
             </section>
             <section>
                 <h2>
                     Article
                 </h2>
+                <!-- h2を巻き込まない形でgridを使うため -->
+                <div>
+                    <article>
+                        <h3>
+                            記事
+                        </h3>
+                        <p>
+                            軽い説明
+                        </p>
+                    </article>
+                    <article>
+                        <h3>
+                            記事
+                        </h3>
+                        <p>
+                            軽い説明
+                        </p>
+                    </article>
+                </div>
             </section>
             <section>
                 <h2>
                     Stack
                 </h2>
+                <!-- 使用理由は上と同様だが、gridかflexboxかで悩み中 -->
+                <div>
+                    <section>
+                        <h3>
+                            Frontend
+                        </h3>
+                        <article>
+                            <h4>    
+                                技術名、もしくはロゴ
+                            </h4>
+                            <p>
+                                その技術について
+                            </p>
+                        </article>
+                        <article>
+                            <h4>
+                                技術名、もしくはロゴ
+                            </h3>
+                            <p>
+                                その技術について
+                            </p>
+                        </article>
+                    </section>
+                    <section>
+                        <h3>
+                            Backend
+                        </h3>
+                        <article>
+                            <h4>    
+                                技術名、もしくはロゴ
+                            </h4>
+                            <p>
+                                その技術について
+                            </p>
+                        </article>
+                        <article>
+                            <h4>
+                                技術名、もしくはロゴ
+                            </h3>
+                            <p>
+                                その技術について
+                            </p>
+                        </article>
+                    </section>
+                    <section>
+                        <h3>
+                            Tools
+                        </h3>
+                        <article>
+                            <h4>    
+                                技術名、もしくはロゴ
+                            </h4>
+                            <p>
+                                その技術について
+                            </p>
+                        </article>
+                        <article>
+                            <h4>
+                                技術名、もしくはロゴ
+                            </h3>
+                            <p>
+                                その技術について
+                            </p>
+                        </article>
+                    </section>                                        
+                </div>
             </section>
             <section>
                 <h2>
                     Profile
                 </h2>
+                <article>
+                    <table>
+                        <caption>
+                            about me
+                        </caption>
+                        <tbody>
+                            <tr>
+                                <!-- scope="row"？行ごとにデータの意味合いが変わるときに使用する属性 -->
+                                <th scope="row">
+                                    名前
+                                </th>
+                                <td>
+                                    そらい、空彩來
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    生年月日
+                                </th>
+                                <td>
+                                    2006/11/26
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                 趣味
+                                </th>
+                                <td>
+                                    ダンス、ゲーム、スノーボード
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    関心領域
+                                </th>
+                                <td>
+                                    web系全般、Unity、UE5、C++、Go
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </article>
+                <article>
+                    <table>
+                        <caption>
+                            Activities
+                        </caption>
+                        <!-- テーブルヘッドの略？tbodyと合わせて見出し行とデータ行を分ける役割 -->
+                        <thead>
+                            <tr>
+                                <th>
+                                    Date
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    20025/??/??
+                                </td>
+                                <td>
+                                    aaaaa
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </article>
             </section>
             <section>
                 <h2>
@@ -80,7 +282,9 @@
             </section>
         </main>
         <footer>
-            
+            <p>
+                &copy; 2026 空彩來. All rights reserved.
+            </p>
         </footer>
     </body>
 </html>
