@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+:root{
+    --bg-color:#2a2a2a;
+}
+
 /*共通部分
 ----------------------------------------------*/
 /* ユニバーサルセレクター */
@@ -18,7 +22,7 @@ body{
     /* line-height: ; */
     /* 文字の色が変わるよ */
     /* color: aqua; */
-
+    color: var(--bg-color);
     /* URL等での横スクロールの発生を防ぐ */
     word-break: break-word;
 }
