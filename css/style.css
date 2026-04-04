@@ -2,6 +2,11 @@
 
 /*共通部分
 ----------------------------------------------*/
+/* ユニバーサルセレクター */
+*{
+    /* widthの解釈を広げてボーダーもwidth用の幅として計算されるようになる。 */
+    box-sizing: border-box;
+}
 html{
     /* 文字サイズの正確な反映
     →正しく反映されないことがあるってこと？ */
@@ -13,15 +18,82 @@ body{
     /* line-height: ; */
     /* 文字の色が変わるよ */
     /* color: aqua; */
+
+    /* URL等での横スクロールの発生を防ぐ */
+    word-break: break-word;
+}
+main{
+    width: 100%;
+    padding: 0 20px;
+}
+section{
+    margin-bottom: 60px;
 }
 a{
     /* aタグの下線をなくす */
     text-decoration: none;
 }
-img{
+img, video{
     /* 画像が親要素の大きさを超えなくなる */
     max-width: 100%;
+
+    /* 画像下に隙間が生じるのを防ぐ */
+    display: block;
 }
 
 /* 固有部分
 ---------------------------------------------- */
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    /* ブラウザ固有で余白をつける可能性があるので0で初期化する。 */
+    margin: 0px;
+    padding: 0px;
+
+    align-items: center;
+    gap: 15px;
+
+    /* モバイル表示にしたときにオーバーしてしまうのでとりあえずの補填 
+    改行と中央寄せ*/
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-grid{
+    /* ディスプレイフレックスの友達 */
+    display: grid;
+    /* ここでグリッドの横の数とその大きさを決める。
+    frはグリッド内でのアイテム同士の大きさを示す。
+    親要素の大きさが変わっても比率を守ることができるのでレスポンシブデザインに向いている。 */
+    grid-template-columns: 1fr;
+}
+
+.container{
+    /* 基本的には画面いっぱいに配置する。 */
+    width: 100%;
+    /* スマホ画面で要素が画面は時にピッタリつかないように最低限の余白を持たせる。 */
+    padding: 0 20px;
+}
+
+header .container,
+footer .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+
+@media (min-width: 768px){
+    .container{
+        /* 広がりすぎると文頭が分からなくなりUX的によくないので最大サイズを抑制する。 */
+        max-width: 1200px;
+        /* 広がったときにも要素を画面の真ん中に置くために横幅をautoとする。 */
+        margin:  0 auto;
+    }
+    .card-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
