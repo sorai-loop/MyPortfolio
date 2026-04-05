@@ -1,7 +1,13 @@
 @charset "UTF-8";
 
 :root{
-    --bg-color:#2a2a2a;
+    --color-bg:#fefefe;
+    --color-accent:#00fdce;
+    --color-main-text:#2a2a2a;
+    --color-sub-text:#7a8a99;
+    --color-highlight:#dbff03;
+    --color-warning:#ff6128;
+    --color-accent-glow:rgba(0, 242, 255, 0.3);
 }
 
 /*共通部分
@@ -22,7 +28,8 @@ body{
     /* line-height: ; */
     /* 文字の色が変わるよ */
     /* color: aqua; */
-    color: var(--bg-color);
+    background-color: var(--color-bg);
+    color: var(--color-main-text);
     /* URL等での横スクロールの発生を防ぐ */
     word-break: break-word;
 }
@@ -64,6 +71,10 @@ nav ul{
     justify-content: center;
 }
 
+.texture-parchment{
+    /* なんとかして羊皮紙っぽさを出したい。 */
+}
+
 .card-grid{
     /* ディスプレイフレックスの友達 */
     display: grid;
@@ -88,7 +99,6 @@ footer .container{
     gap: 15px;
     padding: 20px;
 }
-
 
 @media (min-width: 768px){
     .container{
