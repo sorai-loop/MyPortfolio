@@ -11,7 +11,6 @@
     <body class="texture-parchment">
         <header>
             <!-- 親要素の色を変えたときにサイズ等で頭を抱えないためにここで管理用のタグを1つ挟む。 -->
-            <div class="container">
                 <!-- spanはとくに意味がないときに使うらしいけどなんか曖昧
                  →正しいspanの使いどころとは？ -->
                 <!-- インライン要素としてその文字のみ色やフォントを変えたい場合に使用する。 -->
@@ -41,7 +40,6 @@
                         </li>
                     </ul>
                 </nav>
-            </div>
         </header>
         <main>
             <div class="container">
@@ -67,19 +65,26 @@
                             <h3>
                                 Portfolio
                             </h3>
-                            <p>
-                                軽い説明
-                            </p>
-                            <p>
-                                使用技術
-                            </p>
+                            <div class="incard-grid">
+                                <div class="incard-grid-left">
+                                    <p>
+                                        webの基礎を学ぶため制作中！
+                                    </p>
+                                    <p>
+                                        HTML/CSS/JavaScript
+                                    </p>
+                                </div>
+                                <img src="./sampleimg/20260405072105_019_019802.png" class="incard-grid-right">
+                            </div>
                         </article>
                         <article>
                             <h3>
                                 記事
                             </h3>
                             <p>
-                                軽い説明
+                                エイプリルフールに探偵ごっこをしながら書いた記事。<br>
+                                同じURLなのに表示される内容が違うのはなぜか？<br>
+                                調べると、それは特殊詐欺が身を隠すための新たな形だった...
                             </p>
                         </article>
                     </div>

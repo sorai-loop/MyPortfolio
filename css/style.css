@@ -21,6 +21,8 @@ html{
     /* 文字サイズの正確な反映
     →正しく反映されないことがあるってこと？ */
     font-size: 100%;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 body{
     /* ここでフォントを指定することでbody内のすべてのフォントを指定できる */
@@ -33,12 +35,46 @@ body{
     /* URL等での横スクロールの発生を防ぐ */
     word-break: break-word;
 }
+header{
+    /* 位置の固定 */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 60px;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
 main{
     width: 100%;
     padding: 0 20px;
 }
 section{
-    margin-bottom: 60px;
+}
+.container>section{
+    height: 100vh;
+    width: 100%;
+    padding-top: 60px;
+    text-align: center;
+    scroll-snap-align: start;
+}
+.card-grid>article{
+    /* 枠線と角丸 */
+    border: 2px solid var(--color-highlight); 
+    border-radius: 16px; 
+    
+    /* 余白の調整 */
+    padding: 2rem;
+    margin: 1rem 0;
+    
+    /* 横幅の制御：中央寄せの中で綺麗に見せる */
+    width: 100%; 
+    /* 広がりすぎないように制限 */
+    max-width: 600px;
 }
 a{
     /* aタグの下線をなくす */
@@ -48,6 +84,9 @@ img, video{
     /* 画像が親要素の大きさを超えなくなる */
     max-width: 100%;
 
+    /* 画像のアス比をしていする */
+    aspect-ratio: 16/9;
+    object-fit: cover;
     /* 画像下に隙間が生じるのを防ぐ */
     display: block;
 }
@@ -75,6 +114,12 @@ nav ul{
     /* なんとかして羊皮紙っぽさを出したい。 */
 }
 
+article>h3{
+    padding-bottom: 10px;
+    border-width: thin;
+    border-bottom: var(--color-sub-text);
+}
+
 .card-grid{
     /* ディスプレイフレックスの友達 */
     display: grid;
@@ -84,11 +129,34 @@ nav ul{
     grid-template-columns: 1fr;
 }
 
+.incard-grid{
+    display: flex;
+    justify-content: space-around;
+}
+.incard-grid>img{
+    width: 40%;
+}
+
+.incard-grid-left{
+    padding-right: 10px;
+    border-width: thin;
+    border-right: var(--color-sub-text);
+}
+
+.incard-grid-right{
+    padding-left: 10px;
+}
+
 .container{
     /* 基本的には画面いっぱいに配置する。 */
     width: 100%;
     /* スマホ画面で要素が画面は時にピッタリつかないように最低限の余白を持たせる。 */
     padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header .container,
@@ -100,6 +168,22 @@ footer .container{
     padding: 20px;
 }
 
+#name-section,
+#topics-section,
+#works-section,
+#articles-section,
+#stack-section,
+#profile-section,
+#links-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    scroll-snap-align: start;
+}
+
 @media (min-width: 768px){
     .container{
         /* 広がりすぎると文頭が分からなくなりUX的によくないので最大サイズを抑制する。 */
@@ -108,6 +192,7 @@ footer .container{
         margin:  0 auto;
     }
     .card-grid{
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px;
     }
 }
