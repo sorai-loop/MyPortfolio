@@ -139,12 +139,16 @@ article>h3{
 
 .incard-grid-left{
     padding-right: 10px;
+    border-right: solid;
     border-width: thin;
     border-right: var(--color-sub-text);
 }
 
 .incard-grid-right{
     padding-left: 10px;
+    border-left: solid;
+    border-width: thin;
+    border-right: var(--color-sub-text);
 }
 
 .container{
