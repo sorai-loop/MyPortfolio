@@ -16,6 +16,16 @@
     --color-highlight:#dbff03;
     --color-warning:#ff6128;
     --color-accent-glow:rgba(0, 242, 255, 0.3);
+
+    --site-width:100%;
+    --site-height:100vh;
+    --site-max-width:1200px;
+    --site-header-heigth:60px;
+    --site-bottom-heigth:30px;
+    --site-left-width:5%;
+    --site-rigth-width:5%;
+    --site-zindex-outframe:100;
+    --site-zindex-content:1;
 }
 
 /* .paper-overlay{
@@ -34,8 +44,8 @@
 } */
 
 .stain-overlay{
-    width: 100%;
-    min-height: 100vh;
+    width: var(--site-width);
+    min-height: var(--site-height);
 
     position: relative;
 
@@ -57,19 +67,19 @@
 }
 
 .noise-overlay{
-    position: fixed;
+    width: var(--site-width);
+    height: var(--site-height);
 
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    z-index: 9999;
 
     background-image: url(../assets/noise.svg);
 
     opacity: 0.02;
 
     pointer-events: none;
-    z-index: 9999;
 
     animation: noise-dance 0.2s steps(2) infinite;;
 }
@@ -92,61 +102,47 @@
 ----------------------------------------------*/
 /* ユニバーサルセレクター */
 *{
-    /* widthの解釈を広げてボーダーもwidth用の幅として計算されるようになる。 */
     box-sizing: border-box;
-    /* outline: 1px solid red !important; */
 }
 
 html{
-    /* 文字サイズの正確な反映
-    →正しく反映されないことがあるってこと？ */
-    font-size: 100%;
     scroll-behavior: smooth;
 }
 
 body{
-    /* ここでフォントを指定することでbody内のすべてのフォントを指定できる */
+    background-color: var(--color-bg);
+
+    color: var(--color-main-text);
     font-family: var(--font-base);
     line-height: 1.0;
     font-weight: 550;
     letter-spacing: 0.005em;
-    /* -webkit-font-smoothing: antialiased; */
-    /* line-height: ; */
-    /* 文字の色が変わるよ */
-    /* color: aqua; */
-    background-color: var(--color-bg);
-    color: var(--color-main-text);
-    /* URL等での横スクロールの発生を防ぐ */
     word-break: break-word;
 }
 
 header{
-    /* 位置の固定 */
-    position: fixed;
-    top: 0;
-    left: 0;
 
-    height: 60px;
-    width: 100%;
-    z-index: 1000;
+    height: var(--site-header-heigth);
+    width: var(--site-width);
+
+    padding: 0 var(--site-left-width) var(--site-rigth-width) 0;
+    margin-top: 15px;
 
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0 5%;
 }
 
 main{
-    width: 100%;
-    padding: 0 20px;
+    width: var(--site-width);
 }
 
 h1{
-    font-family: var(--font-display);
-    font-size: 6rem;
     padding-bottom: 25px;
 
     color: var(--color-main-text);
+    font-family: var(--font-display);
+    font-size: 6rem;
 }
 
 h2{
@@ -158,61 +154,86 @@ h3{
 }
 
 section{
-    /* padding: 80px 0px; */
 }
 
 
 a{
-    /* aタグの下線をなくす */
     text-decoration: none;
 }
+
 img, video{
-    /* 画像が親要素の大きさを超えなくなる */
     max-width: 100%;
 
-    /* 画像のアス比をしていする */
     aspect-ratio: 16/9;
     object-fit: cover;
-    /* 画像下に隙間が生じるのを防ぐ */
+    
     display: block;
 }
 
 /* 固有部分
 ---------------------------------------------- */
+.out-frame{
+    width: var(--site-width);
+    height: var(--site-height);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--site-zindex-outframe);
+
+    pointer-events: none;
+}
+
+.out-frame-top{
+    width: var(--site-width);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.out-frame-left{
+    width: var(--site-left-width);
+    height: calc(var(--site-height) - var(--site-header-heigth));
+
+    position: fixed;
+    top: var(--site-header-heigth);
+    left: 0;
+}
+
+.out-frame-rigth{
+    width: var(--site-rigth-width);
+
+}
+
+.out-frame-bottom{
+
+}
 nav ul{
     display: flex;
     flex-direction: row;
-    list-style: none;
-    /* ブラウザ固有で余白をつける可能性があるので0で初期化する。 */
-    margin: 0px;
-    padding: 0px;
-
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
 
-    /* モバイル表示にしたときにオーバーしてしまうのでとりあえずの補填 
-    改行と中央寄せ*/
-    flex-wrap: wrap;
-    justify-content: center;
+    list-style: none;
 }
 
 .container{
-    /* 基本的には画面いっぱいに配置する。 */
-    width: 100%;
-    /* スマホ画面で要素が画面は時にピッタリつかないように最低限の余白を持たせる。 */
-    padding: 0 20px;
+    width: var(--site-width);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    /* background-color: #fff3e1; */
 }
 
 .container>section{
-    width: 100%;
-    padding-top: 60px;
+    width: var(--site-width);
+
+    padding-top: var(--site-header-heigth);
+
     text-align: center;
     scroll-snap-align: start;
 }
@@ -223,11 +244,10 @@ footer .container{
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    padding: 20px;
 }
 
 #name-section{
-    height: 100vh;
+    height: var(--site-height);
 
     display: flex;
     flex-direction: column;
@@ -260,7 +280,6 @@ footer .container{
     align-items: center;
 
     text-align: center;
-    scroll-snap-align: start;
 }
 
 .section-title{
@@ -273,11 +292,7 @@ footer .container{
 }
 
 .card-grid{
-    /* ディスプレイフレックスの友達 */
     display: grid;
-    /* ここでグリッドの横の数とその大きさを決める。
-    frはグリッド内でのアイテム同士の大きさを示す。
-    親要素の大きさが変わっても比率を守ることができるのでレスポンシブデザインに向いている。 */
     grid-template-columns: 1fr;
 }
 
@@ -459,7 +474,7 @@ footer .container{
 
     .container{
         /* 広がりすぎると文頭が分からなくなりUX的によくないので最大サイズを抑制する。 */
-        max-width: 1200px;
+        max-width: var(--site-max-width);
         /* 広がったときにも要素を画面の真ん中に置くために横幅をautoとする。 */
         margin:  0 auto;
     }
