@@ -20,7 +20,8 @@
     --site-width:100%;
     --site-height:100vh;
     --site-max-width:1200px;
-    --site-header-heigth:60px;
+    --site-top-heigth:60px;
+    --site-header-heigth:45px;
     --site-bottom-heigth:30px;
     --site-left-width:5%;
     --site-rigth-width:5%;
@@ -121,12 +122,11 @@ body{
 }
 
 header{
-
     height: var(--site-header-heigth);
     width: var(--site-width);
 
-    padding: 0 var(--site-left-width) var(--site-rigth-width) 0;
-    margin-top: 15px;
+    padding: 0 var(--site-left-width) 0 var(--site-rigth-width);
+    margin-top: calc(var(--site-top-heigth) - var(--site-header-heigth));
 
     display: flex;
     align-items: center;
@@ -186,15 +186,20 @@ img, video{
 
 .out-frame-top{
     width: var(--site-width);
+    height: var(--site-top-heigth);
 
     position: fixed;
     top: 0;
     left: 0;
+
+    border: 1px solid var(--color-sub-text);
+
+    /* background-color: var(--color-bg); */
 }
 
 .out-frame-left{
     width: var(--site-left-width);
-    height: calc(var(--site-height) - var(--site-header-heigth));
+    height: calc(var(--site-height) - var(--site-header-heigth) - var(--site-bottom-heigth));
 
     position: fixed;
     top: var(--site-header-heigth);
@@ -203,11 +208,20 @@ img, video{
 
 .out-frame-rigth{
     width: var(--site-rigth-width);
+    height: calc(var(--site-height) - var(--site-header-heigth) - var(--site-bottom-heigth));
 
+    position: fixed;
+    top: var(--site-header-heigth);
+    right: 0;
 }
 
 .out-frame-bottom{
+    width: var(--site-width);
+    height: var(--site-bottom-heigth);
 
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 nav ul{
     display: flex;
