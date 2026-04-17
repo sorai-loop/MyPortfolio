@@ -405,6 +405,7 @@ footer .container{
     align-items: stretch;
     flex: 1;
 }
+
 .incard-main>img,
 .incard-main>a>img
 {
@@ -486,7 +487,7 @@ footer .container{
 }
 
 .stack-name{
-
+    font-family: var(--font-code);
 }
 
 #profile-section article {
