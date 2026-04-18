@@ -26,8 +26,8 @@
     --site-top-heigth:60px;
     --site-header-heigth:45px;
     --site-bottom-heigth:45px;
-    --site-left-width:5%;
-    --site-rigth-width:5%;
+    --site-left-width:8%;
+    --site-rigth-width:10%;
     --site-zindex-overlay:200;
     --site-zindex-outframe:100;
     --site-zindex-content:1;
@@ -248,13 +248,13 @@ img, video{
 }
 
 .out-frame-left::before {
-    top: -20px;    
-    height: 20px;
+    top: calc(var(--site-top-heigth) * -1);    
+    height: var(--site-top-heigth);
 }
 
 .out-frame-left::after {
-    bottom: -20px; 
-    height: 20px;
+    bottom: calc(var(--site-bottom-heigth) * -1); 
+    height: var(--site-bottom-heigth);
 }
 
 .out-frame-rigth{
@@ -281,17 +281,17 @@ img, video{
 }
 
 .out-frame-rigth::before {
-    top: -20px;
-    height: 20px;
+    top: calc(var(--site-top-heigth) * -1);    
+    height: var(--site-top-heigth);
 }
 
 .out-frame-rigth::after {
-    bottom: -20px;
-    height: 20px;
+    bottom: calc(var(--site-bottom-heigth) * -1); 
+    height: var(--site-bottom-heigth);
 }
 
 nav ul{
-    display: flex;
+    display: flex; 
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -570,8 +570,6 @@ footer .container{
     .container{
         /* 広がりすぎると文頭が分からなくなりUX的によくないので最大サイズを抑制する。 */
         max-width: var(--site-max-width);
-        /* 広がったときにも要素を画面の真ん中に置くために横幅をautoとする。 */
-        margin:  0 auto;
     }
 
     .container>section{
