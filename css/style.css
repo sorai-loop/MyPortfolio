@@ -568,8 +568,6 @@ footer .container{
     }
 
     .container{
-        /* 広がりすぎると文頭が分からなくなりUX的によくないので最大サイズを抑制する。 */
-        max-width: var(--site-max-width);
     }
 
     .container>section{
