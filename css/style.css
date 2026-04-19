@@ -26,8 +26,8 @@
     --site-top-heigth:60px;
     --site-header-heigth:45px;
     --site-bottom-heigth:45px;
-    --site-left-width:8%;
-    --site-rigth-width:10%;
+    --site-left-width:7%;
+    --site-rigth-width:7%;
     --site-zindex-overlay:200;
     --site-zindex-outframe:100;
     --site-zindex-content:1;
@@ -212,13 +212,13 @@ img, video{
     background-color: var(--color-bg);
 }
 
-.footer-text{
-    margin-right: 10px;
-    margin-bottom: calc(var(--site-bottom-heigth) / 4);
+.copyright-text{
+    width: max-content;
 
-    position: fixed;
-    bottom: 0;
-    right: var(--site-rigth-width);
+    /* position: fixed;
+    bottom: calc(var(--site-bottom-heigth) * 4);
+    right: calc((var(--site-rigth-width) / 2) * -1); */
+    transform: rotate(-90deg);
 
     font-family: var(--font-handwriting-bad), var(--font-base);
     font-size:0.8rem;
@@ -296,7 +296,7 @@ nav ul{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 7px;
 
     list-style: none;
 }
@@ -338,10 +338,6 @@ footer .container{
     font-size: 20px;
 }
 
-#links-section{
-    margin-bottom: var(--site-bottom-heigth);
-}
-
 #name-section,
 #topics-section,
 #works-section,
@@ -364,6 +360,10 @@ footer .container{
     text-align: center;
 }
 
+#links-section{
+    margin-bottom: var(--site-bottom-heigth);
+    border-bottom: none;
+}
 .section-title{
     width: 60%;
 
