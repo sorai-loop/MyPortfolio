@@ -1,2 +1,9 @@
 @charset "UTF-8";
 
+@use "../foundation/variable";
+
+.l-main{
+    //width: calc(#{variable.$layout-width} - (#{variable.$layout-side-width} * 2));
+
+    
+}
