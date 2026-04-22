@@ -3,7 +3,7 @@
 @use "../foundation/variable";
 
 .l-frame{
-    z-index: $z-outframe;
+    z-index: variable.$z-outframe;
 
     &__top{
         width: 100%;
@@ -31,12 +31,50 @@
             position:fixed;
             top: variable.$layout-header-height;
             left: 0;
+
+            &::before,
+            &::after{
+                content: "";
+                position: absolute;
+                right: -1px;
+                width: 1px;
+                background-color: variable.$color-text-main;
+            }
+
+            &::before{
+                top: calc(#{variable.$layout-header-height} * -1);
+                height: variable.$layout-header-height;
+            }
+
+            &::after{
+                bottom: calc(#{variable.$layout-footer-height} * -1);
+                height: variable.$layout-footer-height;
+            }
         }
 
         &--right{
             position: fixed;
             top: variable.$layout-header-height;
             right: 0;
+
+            &::before,
+            &::after{
+                content: "";
+                position: absolute;
+                left: -1px;
+                width: 1px;
+                background-color: variable.$color-text-main;
+            }
+
+            &::before{
+                top: calc(#{variable.$layout-header-height} * -1);
+                height: variable.$layout-header-height;
+            }
+
+            &::after{
+                bottom: calc(#{variable.$layout-footer-height} * -1);
+                height: variable.$layout-footer-height;
+            }
         }
     }
 }

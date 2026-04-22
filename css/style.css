@@ -1,1 +1,339 @@
-/*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+/* foundation */
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: #fffbea;
+}
+
+/* layout */
+@keyframes noise-dance {
+  /* 0% { opacity: 0.01; }
+  50% { opacity: 0.02; }
+  100% { opacity: 0.01; } */
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-1%, -2%);
+  }
+  40% {
+    transform: translate(2%, 1%);
+  }
+  60% {
+    transform: translate(-2%, -1%);
+  }
+  80% {
+    transform: translate(1%, 2%);
+  }
+  100% {
+    transform: translate(-1%, 0);
+  }
+}
+.l-overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  pointer-events: none;
+}
+.l-overlay__noise {
+  z-index: calc(200 + 10);
+  background-image: url(../assets/noise.svg);
+  opacity: 0.03;
+  animation: noise-dance 0.2s steps(2) infinite;
+}
+.l-overlay__stain {
+  z-index: calc(200 + 20);
+  background-image: url(../assets/stain.svg);
+  opacity: 1;
+}
+
+.l-frame {
+  z-index: 100;
+}
+.l-frame__top {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.l-frame__bottom {
+  width: 100%;
+  height: 45px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.l-frame__side {
+  width: 7%;
+  height: calc(100vh - 60px - 45px);
+}
+.l-frame__side--left {
+  position: fixed;
+  top: 60px;
+  left: 0;
+}
+.l-frame__side--left::before, .l-frame__side--left::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  width: 1px;
+  background-color: #2a2a2a;
+}
+.l-frame__side--left::before {
+  top: calc(60px * -1);
+  height: 60px;
+}
+.l-frame__side--left::after {
+  bottom: calc(45px * -1);
+  height: 45px;
+}
+.l-frame__side--right {
+  position: fixed;
+  top: 60px;
+  right: 0;
+}
+.l-frame__side--right::before, .l-frame__side--right::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  width: 1px;
+  background-color: #2a2a2a;
+}
+.l-frame__side--right::before {
+  top: calc(60px * -1);
+  height: 60px;
+}
+.l-frame__side--right::after {
+  bottom: calc(45px * -1);
+  height: 45px;
+}
+
+.l-main {
+  width: calc(100% - 7% * 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.l-content {
+  /*
+  ヘッダーの大きさ分余裕を持たせる。
+  ぴったりだと困るので任意で10px分開ける。
+  */
+  padding-top: calc(60px + 10px);
+}
+
+/* object */
+/* component */
+.c-section {
+  border-bottom: 1px solid #414141;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.c-section__title {
+  width: 60%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #414141;
+  font-family: "IM Fell English", serif;
+}
+
+.c-card {
+  width: 100%;
+  max-width: 600px;
+}
+.c-card__title {
+  padding: 8px;
+  border-bottom: 1px solid #414141;
+  font-family: "Sawarabi Mincho", serif;
+}
+.c-card__main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.c-card__text {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #414141;
+  text-align: left;
+  font-family: "Klee One", cursive;
+  line-height: 1.6;
+}
+.c-card__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.c-card__footer {
+  padding-top: 10px;
+  border-top: 1px solid #414141;
+  font-size: 0.85rem;
+  color: #414141;
+  text-align: left;
+}
+
+/* project */
+.p-about__frame {
+  background-color: #fffbea;
+}
+.p-about__frame--top {
+  border-top: 1px solid #2a2a2a;
+}
+.p-about__frame--bottom {
+  border-bottom: 1px solid #2a2a2a;
+}
+.p-about__frame--left {
+  border-left: 1px solid #2a2a2a;
+}
+.p-about__frame--right {
+  border-right: 1px solid #2a2a2a;
+}
+
+.p-header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  pointer-events: all;
+}
+.p-header__nav-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  list-style: none;
+}
+
+.p-name {
+  height: 100vh;
+  width: 100%;
+}
+
+.p-works__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.p-articles__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.p-stacks {
+  width: 100%;
+}
+.p-stacks__category {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.p-stacks__title {
+  font-family: "Sawarabi Mincho", serif;
+}
+.p-stacks__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+}
+.p-stacks__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.p-stacks__icon {
+  width: 40%;
+  height: auto;
+}
+.p-stacks__icon--main {
+  fill: #975600;
+}
+.p-stacks__icon--sub {
+  fill: #574938;
+}
+.p-stacks__icon--accent {
+  fill: #d49853;
+}
+.p-stacks__name {
+  font-family: "JetBrains Mono", monospace;
+}
+.p-profile__title {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-bottom: 0.5rem;
+  color: #2a2a2a;
+}
+.p-profile__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.p-profile__th, .p-profile__td {
+  padding: 1.25rem 0.5rem;
+  border-bottom: 1px solid #414141;
+  text-align: left;
+  vertical-align: top;
+}
+.p-profile__th--tb-row, .p-profile__td--tb-row {
+  width: 120px;
+  font-weight: bold;
+  color: #414141;
+}
+.p-profile__th--th-th, .p-profile__td--th-th {
+  border-bottom: 2px solid #2a2a2a;
+  padding-bottom: 0.75rem;
+}
+.p-profile__th--first:first-child, .p-profile__td--first:first-child {
+  width: 150px;
+  padding-right: 2rem;
+}
+
+.p-links__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.5rem; /* リンク間の余白 */
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+.p-links__item {
+  margin: 0;
+}
+.p-links__url {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--color-sub-text);
+  color: var(--color-main-text);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+/* utility*/
+.u-border--top {
+  border-top: 1px solid #2a2a2a;
+}
+.u-border--bottom {
+  border-bottom: 1px solid #2a2a2a;
+}
+.u-border--left {
+  border-left: 1px solid #2a2a2a;
+}
+.u-border--right {
+  border-right: 1px solid #2a2a2a;
+}/*# sourceMappingURL=style.css.map */

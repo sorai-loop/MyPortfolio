@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@use "../foundation/variable";
+
+.l-content{
+    /*
+    ヘッダーの大きさ分余裕を持たせる。
+    ぴったりだと困るので任意で10px分開ける。
+    */
+    padding-top: calc(#{variable.$layout-header-height} + 10px);
+}

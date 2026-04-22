@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* 完了 */
 :root{
     --font-display:"Shippori Mincho", serif;
     --font-header:"IM Fell English", serif;
@@ -137,6 +138,7 @@ header{
     pointer-events: all;
 }
 
+/* 完了 */
 main{
     width: var(--site-width);
 }
@@ -172,6 +174,7 @@ img, video{
 
 /* 固有部分
 ---------------------------------------------- */
+/* 完了 */
 .out-frame{
     width: var(--site-width);
     height: var(--site-height);
@@ -184,6 +187,7 @@ img, video{
     pointer-events: none;
 }
 
+/* 完了 */
 .out-frame-top{
     width: var(--site-width);
     height: var(--site-top-heigth);
@@ -199,6 +203,7 @@ img, video{
     pointer-events: none;
 }
 
+/* 完了 */
 .out-frame-bottom{
     width: var(--site-width);
     height: var(--site-bottom-heigth);
@@ -224,6 +229,7 @@ img, video{
     font-size:0.8rem;
 }
 
+/* 完了 */
 .out-frame-left{
     width: var(--site-left-width);
     height: calc(var(--site-height) - var(--site-top-heigth) - var(--site-bottom-heigth));
@@ -236,6 +242,7 @@ img, video{
 
     background-color: var(--color-bg);
 }
+
 
 .out-frame-left::before,
 .out-frame-left::after {
@@ -301,6 +308,7 @@ nav ul{
     list-style: none;
 }
 
+/* 完了 */
 .container{
     width: calc(var(--site-width) - var(--site-left-width) - var(--site-rigth-width));
 
@@ -313,6 +321,7 @@ nav ul{
     align-items: center;
 }
 
+/* 不要 */
 header .container,
 footer .container{
     display: flex;
