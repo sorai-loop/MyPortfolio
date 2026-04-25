@@ -135,20 +135,13 @@ body {
 
 /* object */
 /* component */
-.c-section {
+.c-container {
   border-bottom: 1px solid #414141;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-.c-section__title {
-  width: 60%;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #414141;
-  font-size: 3rem;
-  font-family: "IM Fell English", serif;
 }
 
 .c-heading {

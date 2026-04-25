@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@use "../../foundation/variable";
+
+.c-container{
+    border-bottom: 1px solid variable.$color-text-sub;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
