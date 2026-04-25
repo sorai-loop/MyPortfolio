@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+@use "../../foundation/variable";
+
+.p-links{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1.5rem;
+        list-style: none;
+        padding: 0;
+        margin-top: 1.5rem;
+    }
+
+    &__item{
+        margin: 0;
+    }
+
+    &__url{
+        text-decoration: none;
+        color: variable.$color-text-main;
+        font-weight: bold;
+        transition: all 0.2s ease;
+    }
+}

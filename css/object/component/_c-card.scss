@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@use "../../foundation/variable";
+
+.c-card{
+    width: 100%;
+    max-width: 600px;
+
+    &__title{
+        padding: 8px;
+
+        border-bottom: 1px solid variable.$color-text-sub;
+
+        font-family: variable.$font-title;
+    }
+
+    &__pair{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    &__text {
+        padding-bottom: 10px;
+        border-bottom: 1px solid variable.$color-text-sub;
+        text-align: left;
+        font-family: variable.$font-base;
+        line-height: 1.6;
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__footer{
+        padding-top: 10px;
+
+        border-top: 1px solid variable.$color-text-sub;
+
+        font-size: 0.85rem;
+        color: variable.$color-text-sub;
+        text-align: left;
+    }
+}

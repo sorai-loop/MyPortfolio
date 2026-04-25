@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@use "../foundation/variable";
+
+.l-scroll{
+    &__adjustment-top{
+        padding-top: calc(#{variable.$layout-header-height} + 10px);
+    }
+
+    &__adjustment-bottom{
+        padding-bottom: variable.$layout-footer-height;
+    }
+}

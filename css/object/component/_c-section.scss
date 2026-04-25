@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@use "../../foundation/variable";
+
+.c-section{
+    border-bottom: 1px solid variable.$color-text-sub;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    &__title{
+        // これらは全て下線がいい感じになるように書いている
+        width: 60%;
+
+        padding-bottom: 10px;
+
+        border-bottom: 1px solid variable.$color-text-sub;
+
+        font-size: 3rem;
+        font-family: variable.$font-header;
+    }
+
+    // componentのsectionというものに責任を押し付けてしまっていた。
+    // 分離が上手くできていなかったことの懺悔と供養
+    // &__text-main{
+    //     font-family: variable.$font-base;
+    // }
+}

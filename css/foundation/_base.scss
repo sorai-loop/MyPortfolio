@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@use "./variable";
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: variable.$color-bg-base;
+}
