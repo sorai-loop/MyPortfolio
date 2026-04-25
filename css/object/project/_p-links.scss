@@ -7,7 +7,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        gap: 1.5rem; /* リンク間の余白 */
+        gap: 1.5rem;
         list-style: none;
         padding: 0;
         margin-top: 1.5rem;
@@ -18,11 +18,8 @@
     }
 
     &__url{
-        display: inline-block;
-        padding: 0.75rem 1.5rem;
-        border: 1px solid var(--color-sub-text);
-        color: var(--color-main-text);
         text-decoration: none;
+        color: variable.$color-text-main;
         font-weight: bold;
         transition: all 0.2s ease;
     }

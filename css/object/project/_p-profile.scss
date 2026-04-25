@@ -3,6 +3,16 @@
 @use "../../foundation/variable";
 
 .p-profile{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    &__table{
+        width: 95%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+    }
+
     &__title{
         text-align: left;
         font-weight: bold;
@@ -11,33 +21,31 @@
         color: variable.$color-text-main;
     }
 
-    &__table{
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 1rem;
-    }
-
-    &__th,
-    &__td{
-        padding: 1.25rem 0.5rem;
+    &__head,
+    &__label,
+    &__data{
         border-bottom: 1px solid variable.$color-text-sub;
         text-align: left;
         vertical-align: top;
+    }
 
-        &--tb-row{
-            width: 120px;
-            font-weight: bold;
-            color: variable.$color-text-sub;
-        }
-        
-        &--th-th{
-            border-bottom: 2px solid variable.$color-text-main;
-            padding-bottom: 0.75rem;
-        }
-
-        &--first:first-child{
+    &__head{
+        border-bottom: 2px solid variable.$color-text-main;
+        padding-bottom: 0.75rem;
+        &:first-child {
             width: 150px;
-            padding-right: 2rem; 
+            padding-right: 2rem;
+        }
+    }
+
+    &__label {
+        width: 120px;
+        font-weight: bold;
+        color: variable.$color-text-sub;
+        
+        &:first-child {
+            width: 150px;
+            padding-right: 2rem;
         }
     }
 }
