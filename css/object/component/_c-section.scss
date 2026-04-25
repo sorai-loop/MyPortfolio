@@ -22,10 +22,4 @@
         font-size: 3rem;
         font-family: variable.$font-header;
     }
-
-    // componentのsectionというものに責任を押し付けてしまっていた。
-    // 分離が上手くできていなかったことの懺悔と供養
-    // &__text-main{
-    //     font-family: variable.$font-base;
-    // }
 }
