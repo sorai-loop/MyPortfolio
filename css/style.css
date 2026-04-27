@@ -9,6 +9,7 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   background-color: #fffbea;
+  color: #36332f;
 }
 
 /* layout */
@@ -51,7 +52,7 @@ body {
   position: absolute;
   right: -1px;
   width: 1px;
-  background-color: #2a2a2a;
+  background-color: #525b68;
 }
 .l-frame__side--left::before {
   top: calc(60px * -1);
@@ -71,7 +72,7 @@ body {
   position: absolute;
   left: -1px;
   width: 1px;
-  background-color: #2a2a2a;
+  background-color: #525b68;
 }
 .l-frame__side--right::before {
   top: calc(60px * -1);
@@ -100,7 +101,7 @@ body {
 /* object */
 /* component */
 .c-container {
-  border-bottom: 1px solid #414141;
+  border-bottom: 1px solid #525b68;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,9 +112,10 @@ body {
 .c-heading {
   width: 60%;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #414141;
+  border-bottom: 1px solid #525b68;
   font-size: 3rem;
   font-family: "IM Fell English", serif;
+  color: #45312e;
 }
 
 .c-card {
@@ -147,7 +149,7 @@ body {
   padding-top: 0.5rem;
   border-top: 1px solid #414141;
   font-size: 0.85rem;
-  color: #414141;
+  color: #7a6c5d;
   text-align: left;
 }
 
@@ -192,16 +194,16 @@ body {
   background-color: #fffbea;
 }
 .p-about__frame--top {
-  border-top: 1px solid #2a2a2a;
+  border-top: 1px solid #525b68;
 }
 .p-about__frame--bottom {
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid #525b68;
 }
 .p-about__frame--left {
-  border-left: 1px solid #2a2a2a;
+  border-left: 1px solid #525b68;
 }
 .p-about__frame--right {
-  border-right: 1px solid #2a2a2a;
+  border-right: 1px solid #525b68;
 }
 
 .p-header {
@@ -228,10 +230,11 @@ body {
 .p-name__name {
   font-family: "Shippori Mincho", serif;
   font-size: 6rem;
+  color: #45312e;
 }
 .p-name__note {
   font-family: "Klee One", cursive;
-  color: #414141;
+  color: #7a6c5d;
   font-size: 1.2rem;
 }
 .p-name__arrow-text {
@@ -307,7 +310,7 @@ body {
   width: 100%;
   padding: 0 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #414141;
+  border-bottom: 1px solid #e1d8ba;
   text-align: left;
   font-family: "Klee One", cursive;
   line-height: 1.2;
@@ -332,15 +335,15 @@ body {
   font-family: "IM Fell English", serif;
   font-weight: bold;
   font-size: 1.5rem;
-  color: #2a2a2a;
+  color: #2b2d31;
 }
 .p-profile__head, .p-profile__label, .p-profile__data {
-  border-bottom: 1px solid #414141;
+  border-bottom: 1px solid #525b68;
   text-align: left;
   vertical-align: top;
 }
 .p-profile__head {
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid #525b68;
   padding-bottom: 0.5rem;
   font-family: "JetBrains Mono", monospace;
 }
@@ -376,7 +379,7 @@ body {
 }
 .p-links__url {
   text-decoration: none;
-  color: #2a2a2a;
+  color: #36332f;
   font-weight: bold;
   transition: all 0.2s ease;
 }

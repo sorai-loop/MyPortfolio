@@ -25,19 +25,19 @@
         font-family: variable.$font-header;
         font-weight: bold;
         font-size: variable.$font-size-item-title;
-        color: variable.$color-text-main;
+        color: variable.$color-iron-gall;
     }
 
     &__head,
     &__label,
     &__data{
-        border-bottom: variable.$border-size-md solid variable.$color-text-sub;
+        border-bottom: variable.$border-size-md solid variable.$color-drafting-slate;
         text-align: left;
         vertical-align: top;
     }
 
     &__head{
-        border-bottom: variable.$border-size-md solid variable.$color-text-main;
+        border-bottom: variable.$border-size-md solid variable.$color-drafting-slate;
         padding-bottom: variable.$layout-space-s;
 
         font-family: variable.$font-code;

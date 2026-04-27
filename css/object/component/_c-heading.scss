@@ -7,8 +7,10 @@
 
     padding-bottom: variable.$layout-space-s;
 
-    border-bottom: variable.$border-size-md solid variable.$color-text-sub;
+    border-bottom: variable.$border-size-md solid variable.$color-drafting-slate;
 
     font-size: variable.$font-size-section-title;
     font-family: variable.$font-header;
+
+    color: variable.$color-seal-red;
 }

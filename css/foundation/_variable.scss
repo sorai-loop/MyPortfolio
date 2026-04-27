@@ -26,16 +26,15 @@ $font-size-body:         $font-size-md;
 $font-size-caption:      $font-size-s;
 
 // --- Colors ---
-$clr-paper-base:    #fffbea;
-$clr-carbon-black:  #36332f; // 石墨インク（手書きのメイン色）
-$clr-seal-red:      #8c3a2e; // 封蝋・公印の赤（ハンコ用：少し鮮やかに）
-$clr-iron-gall:     #2b2d31; // 没食子インク（印字用：少し青みを持たせて硬質に）
-$clr-sepia-faded:   #9a8c7d; // 褪色したセピア（補足・注釈用）
-$clr-parchment-line:#e1d8ba; // ガイド線（紙の色に近い、ごく薄い色）
-$clr-mana-teal:     #10a39a; // 魔力の残り香（アクセント：背景に沈まない深み）
-$clr-paper-crease:  #f0e8d2; // 紙の折り目・影（区切り用）
-$clr-drafting-slate:#525b68; // 製図用スレート（金属器で引かれた硬質な線）
-
+$color-paper:         #fffbea;
+$color-carbon-black:  #36332f; // 石墨インク（手書きのメイン色）
+$color-seal-red:      #45312e; // 封蝋・公印の赤（ハンコ用：少し鮮やかに）
+$color-iron-gall:     #2b2d31; // 没食子インク（印字用：少し青みを持たせて硬質に）
+$color-sepia-faded:   #7a6c5d; // 褪色したセピア（補足・注釈用）
+$color-parchment-line:#e1d8ba; // ガイド線（紙の色に近い、ごく薄い色）
+$color-engram-teal:   #10a39a; // 魔力の残り香（アクセント：背景に沈まない深み）
+$color-paper-crease:  #f0e8d2; // 紙の折り目・影（区切り用）
+$color-drafting-slate:#525b68; // 製図用スレート（金属器で引かれた硬質な線）
 
 $color-bg-base:          #fffbea;
 $color-text-main:        #2a2a2a;

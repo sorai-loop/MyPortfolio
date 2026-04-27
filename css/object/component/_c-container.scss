@@ -3,7 +3,7 @@
 @use "../../foundation/variable";
 
 .c-container{
-    border-bottom: variable.$border-size-md solid variable.$color-text-sub;
+    border-bottom: variable.$border-size-md solid variable.$color-drafting-slate;
 
     display: flex;
     flex-direction: column;
