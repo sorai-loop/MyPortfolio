@@ -11,12 +11,13 @@
 
     &__name{
         font-family: variable.$font-display;
-        font-size: 6rem;
+        font-size: variable.$font-size-myname;
     }
 
     &__note{
         font-family: variable.$font-base;
         color: variable.$color-text-sub;
+        // デザイン的な役割が強いため大きさとして指定。
         font-size: 1.2rem;
     }
 

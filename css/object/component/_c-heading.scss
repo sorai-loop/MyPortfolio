@@ -5,10 +5,10 @@
 .c-heading{
     width: 60%;
 
-    padding-bottom: 10px;
+    padding-bottom: variable.$layout-space-s;
 
-    border-bottom: 1px solid variable.$color-text-sub;
+    border-bottom: variable.$border-size-md solid variable.$color-text-sub;
 
-    font-size: 3rem;
+    font-size: variable.$font-size-section-title;
     font-family: variable.$font-header;
 }

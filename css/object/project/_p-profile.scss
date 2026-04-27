@@ -7,45 +7,62 @@
     flex-direction: column;
     align-content: center;
 
+    &__inner{
+        padding: 0 variable.$layout-space-md;
+    }
+
     &__table{
-        width: 95%;
+        width: 100%;
+        
         border-collapse: collapse;
-        margin-top: 1rem;
+        margin-top: variable.$layout-space-md;
     }
 
     &__title{
+        padding-bottom: variable.$layout-space-s;
+
         text-align: left;
+        font-family: variable.$font-header;
         font-weight: bold;
-        font-size: 1.1rem;
-        padding-bottom: 0.5rem;
+        font-size: variable.$font-size-item-title;
         color: variable.$color-text-main;
     }
 
     &__head,
     &__label,
     &__data{
-        border-bottom: 1px solid variable.$color-text-sub;
+        border-bottom: variable.$border-size-md solid variable.$color-text-sub;
         text-align: left;
         vertical-align: top;
     }
 
     &__head{
-        border-bottom: 2px solid variable.$color-text-main;
-        padding-bottom: 0.75rem;
+        border-bottom: variable.$border-size-md solid variable.$color-text-main;
+        padding-bottom: variable.$layout-space-s;
+
+        font-family: variable.$font-code;
+
         &:first-child {
             width: 150px;
-            padding-right: 2rem;
+            padding-right: variable.$layout-space-xl;
         }
     }
 
     &__label {
         width: 120px;
+
+        font-family: variable.$font-code;
+
         font-weight: bold;
         color: variable.$color-text-sub;
         
         &:first-child {
             width: 150px;
-            padding-right: 2rem;
+            padding-right: variable.$layout-space-xl;
         }
+    }
+
+    &__data{
+        font-family: variable.$font-base;
     }
 }

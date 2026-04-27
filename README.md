@@ -115,6 +115,17 @@ SFとファンタジーの融合。
 
 CSS、JavaScriptを使い体験を損ねないようにしながらもBlueProtocolのようなアニメーションや演出をマシマシにする。
 
+
+**というのは嘘です、変えます。**
+## 方針
+- 公式が使っている色は気にしない。
+- レグナスの冒険者が書いた開拓局への報告書のイメージでつくる。
+- 手紙、設計図、記録、みたいな感じ。
+- sectionタイトルは記述しなきゃない既定のものというかみたいな感じでこの文章の媒体を作った側がハンコだったり指定してそれを量産しているイメージなのでIM Fell Englishを使用。
+- 公的な記録はタイプライターとかで印字されたシステムチックなものなイメージなので、JetBrains Mono
+- 記録？日記？手紙？みたいなものなので基本的な文字のフォントは手書き風なKlee Oneを採用。
+
+
 ### フォントの候補
 - [Noto Sans Japanese](https://fonts.google.com/noto/specimen/Noto+Sans+JP)（本文で使えそう）
 - [Shippori Mincho](https://fonts.google.com/specimen/Shippori+Mincho)（ちょっと尖りすぎ演出用？）

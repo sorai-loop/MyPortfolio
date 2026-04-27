@@ -6,19 +6,19 @@
     &__frame{
         background-color: variable.$color-bg-base;
         &--top{
-            border-top: 1px solid variable.$color-text-main;
+            border-top: variable.$border-size-md solid variable.$color-text-main;
         }
 
         &--bottom{
-            border-bottom: 1px solid variable.$color-text-main;
+            border-bottom: variable.$border-size-md solid variable.$color-text-main;
         }
 
         &--left{
-            border-left: 1px solid variable.$color-text-main;
+            border-left: variable.$border-size-md solid variable.$color-text-main;
         }
 
         &--right{
-            border-right: 1px solid variable.$color-text-main;
+            border-right: variable.$border-size-md solid variable.$color-text-main;
         }
     }
 }

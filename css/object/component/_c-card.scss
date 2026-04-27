@@ -7,11 +7,12 @@
     max-width: 600px;
 
     &__title{
-        padding: 8px;
+        padding: variable.$layout-space-s;
 
-        border-bottom: 1px solid variable.$color-text-sub;
+        border-bottom: variable.$border-size-md solid variable.$color-text-sub;
 
         font-family: variable.$font-title;
+        font-size: variable.$font-size-item-title;
     }
 
     &__pair{
@@ -21,8 +22,8 @@
     }
 
     &__text {
-        padding-bottom: 10px;
-        border-bottom: 1px solid variable.$color-text-sub;
+        padding-bottom: variable.$layout-space-s;
+        border-bottom: variable.$border-size-md solid variable.$color-text-sub;
         text-align: left;
         font-family: variable.$font-base;
         line-height: 1.6;
@@ -34,11 +35,11 @@
     }
 
     &__footer{
-        padding-top: 10px;
+        padding-top: variable.$layout-space-s;
 
-        border-top: 1px solid variable.$color-text-sub;
+        border-top: variable.$border-size-md solid variable.$color-text-sub;
 
-        font-size: 0.85rem;
+        font-size: variable.$font-size-caption;
         color: variable.$color-text-sub;
         text-align: left;
     }
