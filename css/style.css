@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* foundation */
 html {
   scroll-behavior: smooth;
@@ -8,8 +9,14 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  background-color: #fffbea;
+  background-color: #fffdf4;
   color: #36332f;
+}
+
+a {
+  text-decoration: none; /* デフォルトの紫と下線を消す */
+  color: #525b68;
+  transition: all 0.3s ease;
 }
 
 /* layout */
@@ -206,7 +213,7 @@ body {
 }
 
 .p-about__frame {
-  background-color: #fffbea;
+  background-color: #fffdf4;
 }
 .p-about__frame--top {
   border-top: 1px solid #525b68;

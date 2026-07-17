@@ -15,3 +15,9 @@ body{
     
     color: variable.$color-carbon-black;
 }
+
+a {
+  text-decoration: none; /* デフォルトの紫と下線を消す */
+  color: variable.$color-drafting-slate;
+  transition: all 0.3s ease;
+}
